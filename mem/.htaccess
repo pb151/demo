@@ -1,0 +1,80 @@
+# Activate rewrite Rules
+RewriteEngine On
+RewriteBase /
+
+# Restrict access of private files
+RewriteRule ^(.git) - [F]
+
+<Files *.md>
+    Order allow,deny
+    Deny from all
+</Files>
+
+<Files *.gitignore>
+    Order allow,deny
+    Deny from all
+</Files>
+
+LimitRequestBody 0
+
+# Add MIME Types
+AddType font/ttf .ttf
+AddType font/otf .otf
+AddType application/x-woff .woff
+AddType image/svg+xml .svg
+AddType application/vnd.ms-fontobject .eot
+
+# Set expire header for static files
+<IfModule mod_expires.c>
+	ExpiresActive on
+	ExpiresByType image/gif "access plus 10 years"
+	ExpiresByType image/png "access plus 10 years"
+	ExpiresByType image/x-icon "access plus 10 years"
+	ExpiresByType text/css "access plus 10 years"
+	ExpiresByType text/js "access plus 10 years"
+	ExpiresByType text/javascript "access plus 10 years"
+	ExpiresByType application/javascript "access plus 10 years"
+	ExpiresByType application/x-javascript "access plus 10 years"
+	ExpiresByType application/x-woff "access plus 10 years"
+	ExpiresByType font/truetype "access plus 10 years"
+	ExpiresByType font/opentype "access plus 10 years"
+	ExpiresByType application/x-font-woff "access plus 10 years"
+	ExpiresByType application/vnd.ms-fontobject "access plus 10 years"
+	ExpiresByType image/svg+xml "access plus 10 years"
+
+	<IfModule mod_headers.c>
+		Header append Cache-Control "public"
+	</IfModule>
+</IfModule>
+
+# Security Headers, verify at https://securityheaders.io
+<IfModule mod_headers.c>
+    Header set X-Content-Type-Options "nosniff"
+    Header set X-XSS-Protection "1; mode=block"
+    Header set X-Frame-Options "DENY"
+    Header set Strict-Transport-Security "max-age=631138519; includeSubDomains"
+    Header set Content-Security-Policy "frame-ancestors 'self'"
+    Header edit Set-Cookie ^(.*)$ $1;HttpOnly;Secure
+    Header unset X-Powered-By
+    Header set Referrer-Policy "origin-when-cross-origin"
+</IfModule>
+
+# Turn ETags off
+Header unset ETag
+FileETag None
+
+# Allow font files to be loaded from subdomains
+<FilesMatch "\.(ttf|otf|eot|woff)$">
+	<IfModule mod_headers.c>
+		Header set Access-Control-Allow-Origin "*"
+	</IfModule>
+</FilesMatch>
+
+# Remove Last-Modified Header
+<FilesMatch "\.(ico|pdf|flv|jpg|jpeg|png|gif|js|css|swf|eot|woff|otf|ttf|svg)(\.gz)?$">
+	Header unset Last-Modified
+</FilesMatch>
+
+# Error Documents
+ErrorDocument 403 /404.html
+ErrorDocument 404 /404.html
