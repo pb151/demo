@@ -1,16 +1,4 @@
 <?php
-/**
- * System log
- *
- * @package       gmi
- * @subpackage    ds
- *
- * @copyright     GetMyInvoices
- */
-
-/**
- * Include configuration
- */
 include_once('configs/config.inc.php');
 
 $GLOBALS['config']['cms']['title'] = $GLOBALS['i18']['sys_log'].' - '.$GLOBALS['config']['cms']['title'];
