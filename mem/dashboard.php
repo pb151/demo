@@ -1,16 +1,5 @@
 <?php
-/**
- * Dashboard
- *
- * @package		gmi
- * @subpackage	master-ds
- *
- * @copyright	GetMyInvoices
- */
 
-/**
- * Include configuration
- */
 include_once('configs/config.inc.php');
 verify_login();
 
@@ -24,33 +13,8 @@ if(isset($_SESSION['cms']['redirect_after_login']) && $_SESSION['cms']['redirect
 
 $GLOBALS['config']['cms']['title'] = $GLOBALS['i18']['dashboard'] . ' - ' . $GLOBALS['config']['cms']['title'];
 
-
-/**
- * BEGIN - Include CSS
- */
 include_once($GLOBALS['config']['cms']['design_path'].'base/header.inc.php');
-/**
- * END - Include CSS
- */
 
-/**
- * BEGIN - Include JS
- */
-/**
- * END - Include JS
- */
-
-/**
- * BEGIN - Business Logic
- */
-
-/**
- * END - Business Logic
- */
-
-/**
- * BEGIN - HTML Output
- */
 ?>
 
 	<div class="row">
