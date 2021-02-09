@@ -1,16 +1,5 @@
 <?php
-/**
- * Swap
- *
- * @package	gmi
- * @subpackage	ds
- *
- * @copyright	GetMyInvoices
- */
 
-/**
- * Include configuration
- */
 include_once 'configs/config.inc.php';
 verify_login();
 
