@@ -1,21 +1,5 @@
 <?php
-/**
- * Overview
- *
- * @package        gmi
- * @subpackage    master-ds
- *
- * @copyright    GetMyInvoices
- */
-
-/**
- * Include configuration
- */
 include_once('configs/config.inc.php');
-
-/**
- * BEGIN - Business Logic
- */
 
 if (isset($_POST['access_token']) && $_POST['access_token'] == $GLOBALS['config']['cms']['access_token']) {
     $record = array();
