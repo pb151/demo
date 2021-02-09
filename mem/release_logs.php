@@ -1,16 +1,5 @@
 <?php
-/**
- * Merge Back List
- *
- * @package     gmi
- * @subpackage  master-ds
- *
- * @copyright   GetMyInvoices
- */
 
-/**
- * Include configuration
- */
 include_once('configs/config.inc.php');
 
 verify_login();
