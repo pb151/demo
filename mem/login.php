@@ -1,27 +1,9 @@
 <?php
-/**
- * Login page
- *
- * @package       gmi
- * @subpackage    master-ds
- *
- * @copyright     GetMyInvoices
- */
-
-/**
- * Include configuration
- */
 include_once('configs/config.inc.php');
 
 if($_SESSION['cms']['logged_in']) {
     network_redirect('dashboard.php');
     die();
-}
-
-if(isset($_COOKIE["userdata"])){
-    $username = $_COOKIE["userdata"];
-}else{
-    $username = '';
 }
 
 /**
@@ -66,7 +48,7 @@ $GLOBALS['cms']['includeJS'][] = $GLOBALS['config']['cms']['design_path'].'js/lo
         </div>
         <div class="form-group">
             <label class="control-label visible-ie8 visible-ie9">Username</label>
-            <input class="form-control form-control-solid placeholder-no-fix" type="text" autocomplete="off" placeholder="Username" value="<?php echo $username; ?>" name="username"/>
+            <input class="form-control form-control-solid placeholder-no-fix" type="text" autocomplete="off" placeholder="Username" name="username"/>
         </div>
         <div class="form-group">
             <label class="control-label visible-ie8 visible-ie9">Password</label>
