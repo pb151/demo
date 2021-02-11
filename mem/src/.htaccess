@@ -1,0 +1,8 @@
+# This file restricts access to private files.
+#
+# $Id: .htaccess,v 1.1 2010-01-02 21:35:56 bkahle Exp $
+
+<Files *>
+	Order Deny,Allow
+	Deny from all
+</Files>

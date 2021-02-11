@@ -1,0 +1,111 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "3b19aa8d877ba375cc7bbabfe57ef789",
+    "packages": [
+        {
+            "name": "adodb/adodb-php",
+            "version": "v5.20.18",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ADOdb/ADOdb.git",
+                "reference": "0363eca78eed8bd02d1456072c729da302655241"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ADOdb/ADOdb/zipball/0363eca78eed8bd02d1456072c729da302655241",
+                "reference": "0363eca78eed8bd02d1456072c729da302655241",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.2"
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "adodb.inc.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause",
+                "LGPL-2.1-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "John Lim",
+                    "email": "jlim@natsoft.com",
+                    "role": "Author"
+                },
+                {
+                    "name": "Damien Regad",
+                    "role": "Current maintainer"
+                },
+                {
+                    "name": "Mark Newnham",
+                    "role": "Developer"
+                }
+            ],
+            "description": "ADOdb is a PHP database abstraction layer library",
+            "homepage": "http://adodb.org/",
+            "keywords": [
+                "abstraction",
+                "database",
+                "layer",
+                "library",
+                "php"
+            ],
+            "time": "2020-06-28T17:52:20+00:00"
+        },
+        {
+            "name": "srchea/php-push-web-socket",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/srchea/PHP-Push-WebSocket.git",
+                "reference": "bc563a1218a2a7859ac1a27640293b41ac651fb0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/srchea/PHP-Push-WebSocket/zipball/bc563a1218a2a7859ac1a27640293b41ac651fb0",
+                "reference": "bc563a1218a2a7859ac1a27640293b41ac651fb0",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "PushWebSocket\\": "src/PushWebSocket/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPLv3"
+            ],
+            "authors": [
+                {
+                    "name": "Sann-Remy Chea",
+                    "email": "src@srchea.com"
+                }
+            ],
+            "description": "Lightweight PHP WebSocket server handling several clients.",
+            "time": "2015-05-14T18:12:47+00:00"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": [],
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": {
+        "php": "^5.6 || ^7.0"
+    },
+    "platform-dev": [],
+    "plugin-api-version": "1.1.0"
+}

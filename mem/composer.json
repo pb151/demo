@@ -1,0 +1,36 @@
+{
+	"name": "getmyinvoices/master-ds",
+	"description": "GetMyInvoices Master DS",
+	"type": "project",
+	"homepage": "https://simplessus.com",
+	"support": {
+		"email": "support@simplessus.com"
+	},
+	"authors": [
+		{
+			"name": "Bjoern Kahle",
+			"email": "support@simplessus.com",
+			"role": "lead"
+		},
+		{
+			"name": "Sebastian Goettsch",
+			"email": "support@simplessus.com",
+			"role": "lead"
+		}
+	],
+	"version": "1.0.0",
+	"time": "2020-09-20",
+	"require": {
+		"php": "^5.6 || ^7.0",
+		"adodb/adodb-php": "^5.20",
+		"srchea/php-push-web-socket": "1.0.0",
+		"ext-curl": "*",
+		"ext-json": "*"
+	},
+	"suggest": {
+		"ext-mbstring": "*"
+	},
+	"config": {
+		"vendor-dir": "src/includes"
+	}
+}
